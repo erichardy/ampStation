@@ -1,0 +1,16 @@
+.title KiCad schematic
+U1 Net-_C1-Pad1_ Net-_R1-Pad1_ GND Net-_C2-Pad2_ VCC TL072
+R2 Net-_R1-Pad1_ Net-_C1-Pad1_ 10k
+R1 Net-_R1-Pad1_ /Signal_In 1k
+V1 /Signal_In Net-_V1-Pad2_ ac 60m sin(0 0.06 50)
+U2 NC_01 Net-_C3-Pad1_ GND Net-_C3-Pad2_ Net-_C2-Pad2_ NC_02 NC_03 VCC MAX1044
+C3 Net-_C3-Pad1_ Net-_C3-Pad2_ 10u
+C2 GND Net-_C2-Pad2_ 10u
+C1 Net-_C1-Pad1_ GND 10u
+R3 VCC Out_Amplified 10k
+R4 Out_Amplified GND 10k
+C4 Net-_C1-Pad1_ Out_Amplified 10u
+.subckt Alimentation VCC GND 
+.ends Alimentation 
+.tran .5s 1s 
+.end
