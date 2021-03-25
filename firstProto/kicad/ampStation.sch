@@ -1,0 +1,316 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "Station ampèremétrique"
+Date "2021-03-24"
+Rev "1.0"
+Comp "EH"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Amplifier_Operational:TL072 U1
+U 1 1 605B9BC0
+P 4600 1600
+F 0 "U1" H 4600 1967 50  0000 C CNN
+F 1 "TL072" H 4600 1876 50  0000 C CNN
+F 2 "" H 4600 1600 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 4600 1600 50  0001 C CNN
+	1    4600 1600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 605BAC0A
+P 4600 2150
+F 0 "R2" V 4807 2150 50  0000 C CNN
+F 1 "10k" V 4716 2150 50  0000 C CNN
+F 2 "" V 4530 2150 50  0001 C CNN
+F 3 "~" H 4600 2150 50  0001 C CNN
+	1    4600 2150
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 605BB7B2
+P 3850 1700
+F 0 "R1" V 3643 1700 50  0000 C CNN
+F 1 "1k" V 3734 1700 50  0000 C CNN
+F 2 "" V 3780 1700 50  0001 C CNN
+F 3 "~" H 3850 1700 50  0001 C CNN
+	1    3850 1700
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR01
+U 1 1 605C1B26
+P 3800 850
+F 0 "#PWR01" H 3800 600 50  0001 C CNN
+F 1 "GND" H 3805 677 50  0000 C CNN
+F 2 "" H 3800 850 50  0001 C CNN
+F 3 "" H 3800 850 50  0001 C CNN
+	1    3800 850 
+	1    0    0    -1  
+$EndComp
+$Comp
+L Simulation_SPICE:VSIN V1
+U 1 1 605C4F34
+P 3100 2050
+F 0 "V1" H 3230 2141 50  0000 L CNN
+F 1 "VSIN" H 3230 2050 50  0000 L CNN
+F 2 "" H 3100 2050 50  0001 C CNN
+F 3 "~" H 3100 2050 50  0001 C CNN
+F 4 "Y" H 3100 2050 50  0001 L CNN "Spice_Netlist_Enabled"
+F 5 "V" H 3100 2050 50  0001 L CNN "Spice_Primitive"
+F 6 "ac 60m sin(0 0.06 50)" H 3230 1959 50  0000 L CNN "Spice_Model"
+	1    3100 2050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Regulator_SwitchedCapacitor:MAX1044 U2
+U 1 1 605C67EF
+P 7700 1900
+F 0 "U2" H 7700 2467 50  0000 C CNN
+F 1 "MAX1044" H 7700 2376 50  0000 C CNN
+F 2 "" H 7800 1800 50  0001 C CNN
+F 3 "http://datasheets.maximintegrated.com/en/ds/ICL7660-MAX1044.pdf" H 7800 1800 50  0001 C CNN
+	1    7700 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP C3
+U 1 1 605C96CB
+P 8350 2000
+F 0 "C3" H 8468 2046 50  0000 L CNN
+F 1 "10u" H 8468 1955 50  0000 L CNN
+F 2 "" H 8388 1850 50  0001 C CNN
+F 3 "~" H 8350 2000 50  0001 C CNN
+	1    8350 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP C2
+U 1 1 605CF0F7
+P 8200 1400
+F 0 "C2" H 8318 1446 50  0000 L CNN
+F 1 "10u" H 8318 1355 50  0000 L CNN
+F 2 "" H 8238 1250 50  0001 C CNN
+F 3 "~" H 8200 1400 50  0001 C CNN
+	1    8200 1400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4000 1700 4150 1700
+Wire Wire Line
+	4150 1700 4150 2150
+Wire Wire Line
+	4150 2150 4450 2150
+Connection ~ 4150 1700
+Wire Wire Line
+	4150 1700 4300 1700
+Wire Wire Line
+	4750 2150 5100 2150
+Wire Wire Line
+	5100 2150 5100 1600
+Wire Wire Line
+	5100 1600 4900 1600
+Wire Wire Line
+	3100 1850 3100 1700
+Wire Wire Line
+	3100 1700 3700 1700
+Wire Wire Line
+	4300 1500 4300 750 
+Wire Wire Line
+	4300 750  3800 750 
+Wire Wire Line
+	3800 750  3800 850 
+$Comp
+L Amplifier_Operational:TL072 U1
+U 3 1 605F9529
+P 8900 1200
+F 0 "U1" H 8858 1246 50  0000 L CNN
+F 1 "TL072" H 8858 1155 50  0000 L CNN
+F 2 "" H 8900 1200 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 8900 1200 50  0001 C CNN
+	3    8900 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR05
+U 1 1 605FFE41
+P 7100 1500
+F 0 "#PWR05" H 7100 1350 50  0001 C CNN
+F 1 "VCC" H 7117 1673 50  0000 C CNN
+F 2 "" H 7100 1500 50  0001 C CNN
+F 3 "" H 7100 1500 50  0001 C CNN
+	1    7100 1500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7100 1500 7100 1600
+Wire Wire Line
+	7100 1600 7300 1600
+Wire Wire Line
+	8100 1800 8350 1800
+Wire Wire Line
+	8350 1800 8350 1850
+Wire Wire Line
+	8100 2200 8350 2200
+Wire Wire Line
+	8350 2200 8350 2150
+$Comp
+L power:GND #PWR07
+U 1 1 60603A06
+P 8550 1100
+F 0 "#PWR07" H 8550 850 50  0001 C CNN
+F 1 "GND" H 8555 927 50  0000 C CNN
+F 2 "" H 8550 1100 50  0001 C CNN
+F 3 "" H 8550 1100 50  0001 C CNN
+	1    8550 1100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8100 1600 8200 1600
+Wire Wire Line
+	8200 1600 8200 1550
+Wire Wire Line
+	8200 1600 8800 1600
+Wire Wire Line
+	8800 1600 8800 1500
+Connection ~ 8200 1600
+Wire Wire Line
+	8200 1250 8200 1050
+Wire Wire Line
+	8200 1050 8550 1050
+Wire Wire Line
+	8550 1050 8550 1100
+$Comp
+L power:GND #PWR06
+U 1 1 60607759
+P 7700 2400
+F 0 "#PWR06" H 7700 2150 50  0001 C CNN
+F 1 "GND" H 7705 2227 50  0000 C CNN
+F 2 "" H 7700 2400 50  0001 C CNN
+F 3 "" H 7700 2400 50  0001 C CNN
+	1    7700 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR08
+U 1 1 6060D398
+P 8800 800
+F 0 "#PWR08" H 8800 650 50  0001 C CNN
+F 1 "VCC" H 8817 973 50  0000 C CNN
+F 2 "" H 8800 800 50  0001 C CNN
+F 3 "" H 8800 800 50  0001 C CNN
+	1    8800 800 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8800 900  8800 800 
+$Comp
+L Device:CP C1
+U 1 1 60633DB8
+P 5350 1850
+F 0 "C1" H 5468 1896 50  0000 L CNN
+F 1 "10u" H 5468 1805 50  0000 L CNN
+F 2 "" H 5388 1700 50  0001 C CNN
+F 3 "~" H 5350 1850 50  0001 C CNN
+	1    5350 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 606343F6
+P 5850 1350
+F 0 "R3" H 5920 1396 50  0000 L CNN
+F 1 "10k" H 5920 1305 50  0000 L CNN
+F 2 "" V 5780 1350 50  0001 C CNN
+F 3 "~" H 5850 1350 50  0001 C CNN
+	1    5850 1350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R4
+U 1 1 60634BE6
+P 5850 1850
+F 0 "R4" H 5920 1896 50  0000 L CNN
+F 1 "10k" H 5920 1805 50  0000 L CNN
+F 2 "" V 5780 1850 50  0001 C CNN
+F 3 "~" H 5850 1850 50  0001 C CNN
+	1    5850 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR02
+U 1 1 6063820D
+P 5350 2100
+F 0 "#PWR02" H 5350 1850 50  0001 C CNN
+F 1 "GND" H 5355 1927 50  0000 C CNN
+F 2 "" H 5350 2100 50  0001 C CNN
+F 3 "" H 5350 2100 50  0001 C CNN
+	1    5350 2100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5350 2000 5350 2100
+Wire Wire Line
+	5350 1700 5350 1600
+Wire Wire Line
+	5350 1600 5100 1600
+Connection ~ 5100 1600
+Connection ~ 5350 1600
+$Comp
+L power:GND #PWR04
+U 1 1 60652093
+P 5850 2100
+F 0 "#PWR04" H 5850 1850 50  0001 C CNN
+F 1 "GND" H 5855 1927 50  0000 C CNN
+F 2 "" H 5850 2100 50  0001 C CNN
+F 3 "" H 5850 2100 50  0001 C CNN
+	1    5850 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR03
+U 1 1 6065267E
+P 5850 1050
+F 0 "#PWR03" H 5850 900 50  0001 C CNN
+F 1 "VCC" H 5867 1223 50  0000 C CNN
+F 2 "" H 5850 1050 50  0001 C CNN
+F 3 "" H 5850 1050 50  0001 C CNN
+	1    5850 1050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5850 1600 5850 1700
+Wire Wire Line
+	5850 1500 5850 1600
+Connection ~ 5850 1600
+Wire Wire Line
+	5850 1050 5850 1200
+Wire Wire Line
+	5850 2000 5850 2100
+$Comp
+L Connector:TestPoint TP1
+U 1 1 605C23B2
+P 6250 1450
+F 0 "TP1" H 6308 1568 50  0000 L CNN
+F 1 "TestPoint" H 6308 1477 50  0000 L CNN
+F 2 "" H 6450 1450 50  0001 C CNN
+F 3 "~" H 6450 1450 50  0001 C CNN
+	1    6250 1450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5350 1600 5850 1600
+Wire Wire Line
+	6250 1450 6250 1600
+Wire Wire Line
+	6250 1600 5850 1600
+$EndSCHEMATC
