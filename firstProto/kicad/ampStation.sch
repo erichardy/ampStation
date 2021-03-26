@@ -58,20 +58,6 @@ F 3 "" H 3800 850 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Simulation_SPICE:VSIN V1
-U 1 1 605C4F34
-P 3100 2050
-F 0 "V1" H 3230 2141 50  0000 L CNN
-F 1 "VSIN" H 3230 2050 50  0000 L CNN
-F 2 "" H 3100 2050 50  0001 C CNN
-F 3 "~" H 3100 2050 50  0001 C CNN
-F 4 "Y" H 3100 2050 50  0001 L CNN "Spice_Netlist_Enabled"
-F 5 "V" H 3100 2050 50  0001 L CNN "Spice_Primitive"
-F 6 "ac 60m sin(0 60m 50)" H 3230 1959 50  0000 L CNN "Spice_Model"
-	1    3100 2050
-	1    0    0    -1  
-$EndComp
-$Comp
 L Regulator_SwitchedCapacitor:MAX1044 U2
 U 1 1 605C67EF
 P 6000 4000
@@ -120,10 +106,6 @@ Wire Wire Line
 Wire Wire Line
 	5100 1600 4900 1600
 Wire Wire Line
-	3100 1850 3100 1700
-Wire Wire Line
-	3100 1700 3700 1700
-Wire Wire Line
 	4300 1500 4300 750 
 Wire Wire Line
 	4300 750  3800 750 
@@ -140,22 +122,6 @@ F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 7200 3300 50  0001 C CNN
 	3    7200 3300
 	1    0    0    -1  
 $EndComp
-$Comp
-L power:VCC #PWR05
-U 1 1 605FFE41
-P 5300 3600
-F 0 "#PWR05" H 5300 3450 50  0001 C CNN
-F 1 "VCC" H 5317 3773 50  0000 C CNN
-F 2 "" H 5300 3600 50  0001 C CNN
-F 3 "" H 5300 3600 50  0001 C CNN
-F 4 "X" H 5300 3600 50  0001 C CNN "Spice_Primitive"
-F 5 "Alimentation" H 5300 3600 50  0001 C CNN "Spice_Model"
-F 6 "Y" H 5300 3600 50  0001 C CNN "Spice_Netlist_Enabled"
-	1    5300 3600
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	5300 3600 5300 3700
 Wire Wire Line
 	5300 3700 5600 3700
 Wire Wire Line
@@ -201,17 +167,6 @@ F 1 "GND" H 6005 4427 50  0000 C CNN
 F 2 "" H 6000 4600 50  0001 C CNN
 F 3 "" H 6000 4600 50  0001 C CNN
 	1    6000 4600
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:VCC #PWR08
-U 1 1 6060D398
-P 7100 2900
-F 0 "#PWR08" H 7100 2750 50  0001 C CNN
-F 1 "VCC" H 7117 3073 50  0000 C CNN
-F 2 "" H 7100 2900 50  0001 C CNN
-F 3 "" H 7100 2900 50  0001 C CNN
-	1    7100 2900
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -278,20 +233,6 @@ F 3 "" H 6500 2100 50  0001 C CNN
 	1    6500 2100
 	1    0    0    -1  
 $EndComp
-$Comp
-L power:VCC #PWR03
-U 1 1 6065267E
-P 6500 1050
-F 0 "#PWR03" H 6500 900 50  0001 C CNN
-F 1 "VCC" H 6517 1223 50  0000 C CNN
-F 2 "" H 6500 1050 50  0001 C CNN
-F 3 "" H 6500 1050 50  0001 C CNN
-F 4 "I" H 6500 1050 50  0001 C CNN "Spice_Primitive"
-F 5 "dc 5" H 6500 1050 50  0001 C CNN "Spice_Model"
-F 6 "Y" H 6500 1050 50  0001 C CNN "Spice_Netlist_Enabled"
-	1    6500 1050
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	6500 1600 6500 1700
 Wire Wire Line
@@ -299,49 +240,8 @@ Wire Wire Line
 Connection ~ 6500 1600
 Wire Wire Line
 	6500 2000 6500 2100
-Text Label 3300 1700 0    50   ~ 0
-Signal_In
 NoConn ~ 5600 4000
 NoConn ~ 5600 4200
-$Comp
-L power:PWR_FLAG #FLG0101
-U 1 1 605D4B04
-P 3100 2250
-F 0 "#FLG0101" H 3100 2325 50  0001 C CNN
-F 1 "PWR_FLAG" H 3100 2423 50  0000 C CNN
-F 2 "" H 3100 2250 50  0001 C CNN
-F 3 "~" H 3100 2250 50  0001 C CNN
-	1    3100 2250
-	-1   0    0    1   
-$EndComp
-$Comp
-L power:PWR_FLAG #FLG0102
-U 1 1 605D64B5
-P 6850 3050
-F 0 "#FLG0102" H 6850 3125 50  0001 C CNN
-F 1 "PWR_FLAG" H 6850 3223 50  0000 C CNN
-F 2 "" H 6850 3050 50  0001 C CNN
-F 3 "~" H 6850 3050 50  0001 C CNN
-	1    6850 3050
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:PWR_FLAG #FLG0103
-U 1 1 605D7413
-P 5300 3850
-F 0 "#FLG0103" H 5300 3925 50  0001 C CNN
-F 1 "PWR_FLAG" H 5300 4023 50  0000 C CNN
-F 2 "" H 5300 3850 50  0001 C CNN
-F 3 "~" H 5300 3850 50  0001 C CNN
-	1    5300 3850
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	5300 3850 5300 3700
-Connection ~ 5300 3700
-Wire Wire Line
-	6850 3050 6850 3150
-Connection ~ 6850 3150
 Wire Wire Line
 	6000 4500 6000 4600
 $Comp
@@ -361,52 +261,115 @@ Connection ~ 5350 1600
 Wire Wire Line
 	6100 1600 6500 1600
 $Comp
-L Connector:Conn_01x02_Female J1
-U 1 1 606187E2
-P 3750 3700
-F 0 "J1" H 3700 3800 50  0000 L CNN
-F 1 "Conn_01x02_Female" H 3300 3500 50  0000 L CNN
-F 2 "" H 3750 3700 50  0001 C CNN
-F 3 "~" H 3750 3700 50  0001 C CNN
-F 4 "X" H 3750 3700 50  0001 C CNN "Spice_Primitive"
-F 5 "Alimentation" H 3750 3700 50  0001 C CNN "Spice_Model"
-F 6 "Y" H 3750 3700 50  0001 C CNN "Spice_Netlist_Enabled"
-	1    3750 3700
+L Connector_Generic:Conn_01x02 J1
+U 1 1 605D37B0
+P 2900 1700
+F 0 "J1" H 2818 1917 50  0000 C CNN
+F 1 "Conn_01x02" H 2818 1826 50  0000 C CNN
+F 2 "" H 2900 1700 50  0001 C CNN
+F 3 "~" H 2900 1700 50  0001 C CNN
+F 4 "V" H 2900 1700 50  0001 C CNN "Spice_Primitive"
+F 5 "ac 60m 0" H 2900 1700 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 2900 1700 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    2900 1700
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR09
+U 1 1 605D597B
+P 3200 1950
+F 0 "#PWR09" H 3200 1700 50  0001 C CNN
+F 1 "GND" H 3205 1777 50  0000 C CNN
+F 2 "" H 3200 1950 50  0001 C CNN
+F 3 "" H 3200 1950 50  0001 C CNN
+	1    3200 1950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3100 1800 3200 1800
+Wire Wire Line
+	3200 1800 3200 1950
+$Comp
+L Connector_Generic:Conn_01x02 J2
+U 1 1 605D6C5A
+P 7250 1600
+F 0 "J2" H 7330 1592 50  0000 L CNN
+F 1 "Conn_01x02" H 7330 1501 50  0000 L CNN
+F 2 "" H 7250 1600 50  0001 C CNN
+F 3 "~" H 7250 1600 50  0001 C CNN
+F 4 "I" H 7250 1600 50  0001 C CNN "Spice_Primitive"
+F 5 "N" H 7250 1600 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    7250 1600
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:VCC #PWR09
-U 1 1 60619445
-P 4150 3700
-F 0 "#PWR09" H 4150 3550 50  0001 C CNN
-F 1 "VCC" H 4167 3873 50  0000 C CNN
-F 2 "" H 4150 3700 50  0001 C CNN
-F 3 "" H 4150 3700 50  0001 C CNN
-F 4 "X" H 4150 3700 50  0001 C CNN "Spice_Primitive"
-F 5 "Alimentation" H 4150 3700 50  0001 C CNN "Spice_Model"
-F 6 "Y" H 4150 3700 50  0001 C CNN "Spice_Netlist_Enabled"
-	1    4150 3700
+L power:GND #PWR011
+U 1 1 605D7D22
+P 6900 1800
+F 0 "#PWR011" H 6900 1550 50  0001 C CNN
+F 1 "GND" H 6905 1627 50  0000 C CNN
+F 2 "" H 6900 1800 50  0001 C CNN
+F 3 "" H 6900 1800 50  0001 C CNN
+	1    6900 1800
 	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6500 1600 7050 1600
+Wire Wire Line
+	7050 1700 6900 1700
+Wire Wire Line
+	6900 1700 6900 1800
+Wire Wire Line
+	3100 1700 3700 1700
+$Comp
+L Connector_Generic:Conn_01x02 J3
+U 1 1 605DDC07
+P 8250 2350
+F 0 "J3" H 8168 2567 50  0000 C CNN
+F 1 "Conn_01x02" H 8168 2476 50  0000 C CNN
+F 2 "" H 8250 2350 50  0001 C CNN
+F 3 "~" H 8250 2350 50  0001 C CNN
+F 4 "I" H 8250 2350 50  0001 C CNN "Spice_Primitive"
+F 5 "dc 5" H 8250 2350 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 8250 2350 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    8250 2350
+	-1   0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR010
-U 1 1 6061ABCD
-P 4150 3800
-F 0 "#PWR010" H 4150 3550 50  0001 C CNN
-F 1 "GND" H 4155 3627 50  0000 C CNN
-F 2 "" H 4150 3800 50  0001 C CNN
-F 3 "" H 4150 3800 50  0001 C CNN
-	1    4150 3800
+L power:GND #PWR012
+U 1 1 605DF297
+P 8800 2550
+F 0 "#PWR012" H 8800 2300 50  0001 C CNN
+F 1 "GND" H 8805 2377 50  0000 C CNN
+F 2 "" H 8800 2550 50  0001 C CNN
+F 3 "" H 8800 2550 50  0001 C CNN
+	1    8800 2550
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3750 3700 4150 3700
+	8450 2450 8800 2450
 Wire Wire Line
-	3750 3800 4150 3800
-Text Notes 3400 4450 0    50   ~ 0
-* modèle Spice Alimentation\n.subckt Alimentation VCC GND\nVpositive VCC GND DC 5\n.ends Alimentation
+	8800 2450 8800 2550
 Wire Wire Line
-	6500 1050 6500 1200
-NoConn ~ 3550 3700
-NoConn ~ 3550 3800
+	8800 2350 8450 2350
+Wire Wire Line
+	8800 2350 8800 1900
+Wire Wire Line
+	8800 950  6500 950 
+Wire Wire Line
+	6500 950  6500 1200
+Wire Wire Line
+	8800 1900 7700 1900
+Wire Wire Line
+	7700 1900 7700 2900
+Wire Wire Line
+	7700 2900 7100 2900
+Connection ~ 8800 1900
+Wire Wire Line
+	8800 1900 8800 950 
+Wire Wire Line
+	7100 2900 5300 2900
+Wire Wire Line
+	5300 2900 5300 3700
+Connection ~ 7100 2900
 $EndSCHEMATC
