@@ -19,8 +19,8 @@ U 1 1 605B9BC0
 P 4600 1600
 F 0 "U1" H 4600 1967 50  0000 C CNN
 F 1 "LM348D" H 4600 1876 50  0000 C CNN
-F 2 "" H 4600 1600 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 4600 1600 50  0001 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 4600 1600 50  0001 C CNN
+F 3 "" H 4600 1600 50  0001 C CNN
 F 4 "X" H 4600 1600 50  0001 C CNN "Spice_Primitive"
 F 5 "LM348" H 4600 1600 50  0001 C CNN "Spice_Model"
 F 6 "Y" H 4600 1600 50  0001 C CNN "Spice_Netlist_Enabled"
@@ -30,23 +30,12 @@ F 8 "3 2 8 4 1" H 4600 1600 50  0001 C CNN "Spice_Node_Sequence"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R2
-U 1 1 605BAC0A
-P 4600 2150
-F 0 "R2" V 4807 2150 50  0000 C CNN
-F 1 "10k" V 4716 2150 50  0000 C CNN
-F 2 "" V 4530 2150 50  0001 C CNN
-F 3 "~" H 4600 2150 50  0001 C CNN
-	1    4600 2150
-	0    -1   -1   0   
-$EndComp
-$Comp
 L Device:R R1
 U 1 1 605BB7B2
 P 3850 1700
 F 0 "R1" V 3643 1700 50  0000 C CNN
 F 1 "1k" V 3734 1700 50  0000 C CNN
-F 2 "" V 3780 1700 50  0001 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x06_P2.54mm_Vertical" V 3780 1700 50  0001 C CNN
 F 3 "~" H 3850 1700 50  0001 C CNN
 	1    3850 1700
 	0    1    1    0   
@@ -68,7 +57,7 @@ U 1 1 605C67EF
 P 4400 3800
 F 0 "U2" H 4400 4367 50  0000 C CNN
 F 1 "MAX1044" H 4400 4276 50  0000 C CNN
-F 2 "" H 4500 3700 50  0001 C CNN
+F 2 "Package_DIP:DIP-8_W7.62mm" H 4500 3700 50  0001 C CNN
 F 3 "http://datasheets.maximintegrated.com/en/ds/ICL7660-MAX1044.pdf" H 4500 3700 50  0001 C CNN
 F 4 "X" H 4400 3800 50  0001 C CNN "Spice_Primitive"
 F 5 "TL072" H 4400 3800 50  0001 C CNN "Spice_Model"
@@ -83,18 +72,18 @@ U 1 1 605C96CB
 P 5050 3900
 F 0 "C3" H 5168 3946 50  0000 L CNN
 F 1 "10u" H 5168 3855 50  0000 L CNN
-F 2 "" H 5088 3750 50  0001 C CNN
+F 2 "Capacitor_THT:C_Axial_L17.0mm_D7.0mm_P20.00mm_Horizontal" H 5088 3750 50  0001 C CNN
 F 3 "~" H 5050 3900 50  0001 C CNN
 	1    5050 3900
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:CP C2
+L Device:CP C4
 U 1 1 605CF0F7
 P 4900 3300
-F 0 "C2" H 5018 3346 50  0000 L CNN
+F 0 "C4" H 5018 3346 50  0000 L CNN
 F 1 "10u" H 5018 3255 50  0000 L CNN
-F 2 "" H 4938 3150 50  0001 C CNN
+F 2 "Capacitor_THT:C_Axial_L17.0mm_D7.0mm_P20.00mm_Horizontal" H 4938 3150 50  0001 C CNN
 F 3 "~" H 4900 3300 50  0001 C CNN
 	1    4900 3300
 	1    0    0    -1  
@@ -125,8 +114,8 @@ L Amplifier_Operational:TL072 U1
 U 3 1 605F9529
 P 5600 3100
 F 0 "U1" H 5558 3146 50  0000 L CNN
-F 1 "TL072" H 5558 3055 50  0000 L CNN
-F 2 "" H 5600 3100 50  0001 C CNN
+F 1 "LM348D" H 5558 3055 50  0000 L CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 5600 3100 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 5600 3100 50  0001 C CNN
 	3    5600 3100
 	1    0    0    -1  
@@ -182,31 +171,20 @@ U 1 1 60633DB8
 P 5350 1850
 F 0 "C1" H 5468 1896 50  0000 L CNN
 F 1 "10u" H 5468 1805 50  0000 L CNN
-F 2 "" H 5388 1700 50  0001 C CNN
+F 2 "Capacitor_THT:C_Axial_L17.0mm_D7.0mm_P20.00mm_Horizontal" H 5388 1700 50  0001 C CNN
 F 3 "~" H 5350 1850 50  0001 C CNN
 	1    5350 1850
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R3
+L Device:R R2
 U 1 1 606343F6
 P 6500 1350
-F 0 "R3" H 6570 1396 50  0000 L CNN
+F 0 "R2" H 6570 1396 50  0000 L CNN
 F 1 "10k" H 6570 1305 50  0000 L CNN
-F 2 "" V 6430 1350 50  0001 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x06_P2.54mm_Vertical" V 6430 1350 50  0001 C CNN
 F 3 "~" H 6500 1350 50  0001 C CNN
 	1    6500 1350
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R4
-U 1 1 60634BE6
-P 6500 1850
-F 0 "R4" H 6570 1896 50  0000 L CNN
-F 1 "10k" H 6570 1805 50  0000 L CNN
-F 2 "" V 6430 1850 50  0001 C CNN
-F 3 "~" H 6500 1850 50  0001 C CNN
-	1    6500 1850
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -244,18 +222,18 @@ Wire Wire Line
 	6500 1500 6500 1600
 Connection ~ 6500 1600
 Wire Wire Line
-	6500 2000 6500 2100
+	6500 2000 6500 2050
 NoConn ~ 4000 3800
 NoConn ~ 4000 4000
 Wire Wire Line
 	4400 4300 4400 4400
 $Comp
-L Device:CP C4
+L Device:CP C2
 U 1 1 60611391
 P 5950 1600
-F 0 "C4" V 6100 1650 50  0000 L CNN
+F 0 "C2" V 6100 1650 50  0000 L CNN
 F 1 "10u" V 5750 1550 50  0000 L CNN
-F 2 "" H 5988 1450 50  0001 C CNN
+F 2 "Capacitor_THT:C_Axial_L17.0mm_D7.0mm_P20.00mm_Horizontal" H 5988 1450 50  0001 C CNN
 F 3 "~" H 5950 1600 50  0001 C CNN
 	1    5950 1600
 	0    -1   -1   0   
@@ -271,7 +249,7 @@ U 1 1 605D37B0
 P 2900 1700
 F 0 "J1" H 2818 1917 50  0000 C CNN
 F 1 "Conn_01x02" H 2818 1826 50  0000 C CNN
-F 2 "" H 2900 1700 50  0001 C CNN
+F 2 "EH_Modules:Bornier_2pts_L10mm_W9mm_P5mm" H 2900 1700 50  0001 C CNN
 F 3 "~" H 2900 1700 50  0001 C CNN
 F 4 "V" H 2900 1700 50  0001 C CNN "Spice_Primitive"
 F 5 "ac 60m 0" H 2900 1700 50  0001 C CNN "Spice_Model"
@@ -300,7 +278,7 @@ U 1 1 605D6C5A
 P 7250 1600
 F 0 "J2" H 7330 1592 50  0000 L CNN
 F 1 "Conn_01x02" H 7330 1501 50  0000 L CNN
-F 2 "" H 7250 1600 50  0001 C CNN
+F 2 "EH_Modules:Bornier_2pts_L10mm_W9mm_P5mm" H 7250 1600 50  0001 C CNN
 F 3 "~" H 7250 1600 50  0001 C CNN
 F 4 "I" H 7250 1600 50  0001 C CNN "Spice_Primitive"
 F 5 "N" H 7250 1600 50  0001 C CNN "Spice_Netlist_Enabled"
@@ -331,8 +309,8 @@ L Connector_Generic:Conn_01x02 J3
 U 1 1 605DDC07
 P 3200 3500
 F 0 "J3" H 3118 3717 50  0000 C CNN
-F 1 "Conn_01x02" H 3118 3626 50  0000 C CNN
-F 2 "" H 3200 3500 50  0001 C CNN
+F 1 "Alim5V" H 3118 3626 50  0000 C CNN
+F 2 "EH_Modules:Bornier_2pts_L10mm_W9mm_P5mm" H 3200 3500 50  0001 C CNN
 F 3 "~" H 3200 3500 50  0001 C CNN
 F 4 "I" H 3200 3500 50  0001 C CNN "Spice_Primitive"
 F 5 "dc 5" H 3200 3500 50  0001 C CNN "Spice_Model"
@@ -358,10 +336,10 @@ Text Notes 2900 1350 0    50   ~ 0
 Wire Wire Line
 	3750 3750 3750 3600
 $Comp
-L power:VCC #PWR?
+L power:VCC #PWR03
 U 1 1 60602642
 P 3750 3200
-F 0 "#PWR?" H 3750 3050 50  0001 C CNN
+F 0 "#PWR03" H 3750 3050 50  0001 C CNN
 F 1 "VCC" H 3767 3373 50  0000 C CNN
 F 2 "" H 3750 3200 50  0001 C CNN
 F 3 "" H 3750 3200 50  0001 C CNN
@@ -369,10 +347,10 @@ F 3 "" H 3750 3200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:VCC #PWR?
+L power:VCC #PWR05
 U 1 1 60602D61
 P 5500 2600
-F 0 "#PWR?" H 5500 2450 50  0001 C CNN
+F 0 "#PWR05" H 5500 2450 50  0001 C CNN
 F 1 "VCC" H 5517 2773 50  0000 C CNN
 F 2 "" H 5500 2600 50  0001 C CNN
 F 3 "" H 5500 2600 50  0001 C CNN
@@ -389,10 +367,10 @@ Wire Wire Line
 Wire Wire Line
 	5500 2600 5500 2800
 $Comp
-L power:VCC #PWR?
+L power:VCC #PWR08
 U 1 1 6060556A
 P 6500 1000
-F 0 "#PWR?" H 6500 850 50  0001 C CNN
+F 0 "#PWR08" H 6500 850 50  0001 C CNN
 F 1 "VCC" H 6517 1173 50  0000 C CNN
 F 2 "" H 6500 1000 50  0001 C CNN
 F 3 "" H 6500 1000 50  0001 C CNN
@@ -406,5 +384,41 @@ Text Notes 2850 3150 0    50   ~ 0
 Text Notes 7050 1450 0    50   ~ 0
 * Sortie vers microcontroleur
 Text Notes 6250 3650 0    50   ~ 0
-- Les résistances R1 et R2 doivent être ajustées\n   en fonction du gain désiré\n- Les résistances R3 et R4 doivent être ajustées\n   en fonction de l'OFFSET désiré.\n- On doit donc avoir des supports pour ces \n   4 résistances (et non les souder sur la plaque de prototypage)
+- Les résistances RV1 et RV2 sont ajustées\n   en fonction du gain et de l'OFFSET désirés\n- supports pour R1, R3, RV1 et RV2
+$Comp
+L Device:R_POT_US RV1
+U 1 1 605FC834
+P 4600 2150
+F 0 "RV1" V 4395 2150 50  0000 C CNN
+F 1 "10k" V 4486 2150 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x03_P2.54mm_Vertical" H 4600 2150 50  0001 C CNN
+F 3 "~" H 4600 2150 50  0001 C CNN
+	1    4600 2150
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4600 2300 4600 2400
+Wire Wire Line
+	4600 2400 5100 2400
+Wire Wire Line
+	5100 2400 5100 2150
+Connection ~ 5100 2150
+$Comp
+L Device:R_POT_US RV2
+U 1 1 605FFC42
+P 6500 1850
+F 0 "RV2" H 6432 1804 50  0000 R CNN
+F 1 "100k" H 6432 1895 50  0000 R CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x03_P2.54mm_Vertical" H 6500 1850 50  0001 C CNN
+F 3 "~" H 6500 1850 50  0001 C CNN
+	1    6500 1850
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	6350 1850 6350 2050
+Wire Wire Line
+	6350 2050 6500 2050
+Connection ~ 6500 2050
+Wire Wire Line
+	6500 2050 6500 2100
 $EndSCHEMATC

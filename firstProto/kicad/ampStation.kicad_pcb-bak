@@ -646,7 +646,7 @@
   )
 
   (module Package_DIP:DIP-8_W7.62mm placed (layer F.Cu) (tedit 5A02E8C5) (tstamp 606046AD)
-    (at 43.18 80.01)
+    (at 49 73)
     (descr "8-lead though-hole mounted DIP package, row spacing 7.62 mm (300 mils)")
     (tags "THT DIP DIL PDIP 2.54mm 7.62mm 300mil")
     (path /605C67EF)
