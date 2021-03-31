@@ -33,6 +33,8 @@ tmp
 *.out
 *.app
 
+.vscode
+
 fp-info-cache
 !ampStation-cache.lib
 !Kicad-libs/*.lib
