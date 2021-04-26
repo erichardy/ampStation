@@ -40,10 +40,25 @@ NB: when probing with the oscillo, the values are a bit lower !!!
 
 #define SIGNAL_LOW_PIN A0
 #define SIGNAL_HIGH_PIN A1
-#define nbSamples 400
+#define nbSamples 200
+
+// Include Wire Library for I2C
+#include <Wire.h>
+// Include Adafruit Graphics & OLED libraries
+#include <Adafruit_GFX.h>
+#include <Adafruit_SSD1306.h>
+
+// see https://github.com/adafruit/Adafruit_SSD1306/blob/master/examples/ssd1306_128x32_i2c/ssd1306_128x32_i2c.ino
+#define SCREEN_WIDTH 128 // OLED display width, in pixels
+#define SCREEN_HEIGHT 32 // OLED display height, in pixels
+#define OLED_RESET 4
+#define SCREEN_ADDRESS 0x3C ///< See datasheet for Address; 0x3D for 128x64, 0x3C for 128x32
+Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
 
 int samplesLow[nbSamples];
 int samplesHigh[nbSamples];
+
+
 
 int maxValue(int *samples) {
   int max = 0;
@@ -68,6 +83,18 @@ void setup() {
   pinMode(SIGNAL_LOW_PIN, INPUT);
   pinMode(SIGNAL_HIGH_PIN, INPUT);
   Serial.println("Ready.");
+  // START Init OLED screen
+  display.begin(SSD1306_SWITCHCAPVCC, 0x3C);
+  display.clearDisplay();
+  //Set the color - always use white despite actual display color
+  display.setTextColor(WHITE);
+  //Set the font size
+  display.setTextSize(2);
+  //Set the cursor coordinates
+  display.setCursor(0,0);
+  display.println("...init...");
+  display.display();
+  // END Init OLED screen
 }
 
 void loop() {
@@ -83,6 +110,13 @@ void loop() {
   Serial.print(mh);
   Serial.print(" ");
   Serial.println(_millis2 - _millis1);
+  //
+  display.clearDisplay();
+  display.setCursor(0,0);
+  display.println(ml);
+  display.println(mh);
+  display.display();
+  //
 
   delay(1000);
 }
